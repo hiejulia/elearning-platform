@@ -19,4 +19,6 @@ public interface EsCourseRepository extends ElasticsearchRepository<EsCourse, St
 
     // Find course by course id
     EsCourse findByCourseId(Long courseId);
+    // Find course by tag name
+    Page<EsCourse> findByTags(String name,Pageable pageable);
 }

@@ -32,3 +32,10 @@ spring:
 file:
   server:
     url: http://localhost:8081/upload
+
+# Elasticsearch server
+elasticsearch:
+  host: localhost
+  port: 9300
+  cluster:
+    name: elearning
