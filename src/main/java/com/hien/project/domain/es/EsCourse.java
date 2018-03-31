@@ -56,10 +56,10 @@ public class EsCourse implements Serializable {
 
     }
 //
-//    public EsCourse(Long blogId, String title, String summary, String content, String username,
+//    public EsCourse(Long courseId, String title, String summary, String content, String username,
 //                  String avatar, Timestamp createTime, Integer readSize, Integer commentSize,
 //                  Integer voteSize, String tags) {
-//        this.Id = blogId;
+//        this.Id = courseId;
 //        this.title = title;
 //        this.summary = summary;
 //        this.content = content;
@@ -72,32 +72,32 @@ public class EsCourse implements Serializable {
 //        this.tags = tags;
 //    }
 
-//    public EsBlog(Blog blog) {
-//        this.blogId = blog.getId();
-//        this.title = blog.getTitle();
-//        this.summary = blog.getSummary();
-//        this.content = blog.getContent();
-//        this.username = blog.getUser().getUsername();
-//        this.avatar = blog.getUser().getAvatar();
-//        this.createTime = blog.getCreateTime();
-//        this.readSize = blog.getReadSize();
-//        this.commentSize = blog.getCommentSize();
-//        this.voteSize = blog.getVoteSize();
-//        this.tags = blog.getTags();
+//    public EsCourse(Course course) {
+//        this.courseId = course.getId();
+//        this.title = course.getTitle();
+//        this.summary = course.getSummary();
+//        this.content = course.getContent();
+//        this.username = course.getUser().getUsername();
+//        this.avatar = course.getUser().getAvatar();
+//        this.createTime = course.getCreateTime();
+//        this.readSize = course.getReadSize();
+//        this.commentSize = course.getCommentSize();
+//        this.voteSize = course.getVoteSize();
+//        this.tags = course.getTags();
 //    }
 //
-//    public void update(Blog blog){
-//        this.blogId = blog.getId();
-//        this.title = blog.getTitle();
-//        this.summary = blog.getSummary();
-//        this.content = blog.getContent();
-//        this.username = blog.getUser().getUsername();
-//        this.avatar = blog.getUser().getAvatar();
-//        this.createTime = blog.getCreateTime();
-//        this.readSize = blog.getReadSize();
-//        this.commentSize = blog.getCommentSize();
-//        this.voteSize = blog.getVoteSize();
-//        this.tags = blog.getTags();
+//    public void update(Course course){
+//        this.courseId = course.getId();
+//        this.title = course.getTitle();
+//        this.summary = course.getSummary();
+//        this.content = course.getContent();
+//        this.username = course.getUser().getUsername();
+//        this.avatar = course.getUser().getAvatar();
+//        this.createTime = course.getCreateTime();
+//        this.readSize = course.getReadSize();
+//        this.commentSize = course.getCommentSize();
+//        this.voteSize = course.getVoteSize();
+//        this.tags = course.getTags();
 //    }
 //
 //    public String getId() {
@@ -108,12 +108,12 @@ public class EsCourse implements Serializable {
 //        this.id = id;
 //    }
 //
-//    public Long getBlogId() {
-//        return blogId;
+//    public Long getCourseId() {
+//        return courseId;
 //    }
 //
-//    public void setBlogId(Long blogId) {
-//        this.blogId = blogId;
+//    public void setCourseId(Long courseId) {
+//        this.courseId = courseId;
 //    }
 //
 //    public String getTitle() {
@@ -200,6 +200,6 @@ public class EsCourse implements Serializable {
 //    public String toString() {
 //        return String.format(
 //                "User[id=%d, title='%s', content='%s']",
-//                blogId, title, content);
+//                courseId, title, content);
 //    }
 }

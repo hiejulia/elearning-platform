@@ -1,4 +1,9 @@
 package com.hien.project.service;
 
-public class AuthorityService {
+
+import com.hien.project.domain.Authority;
+
+public interface AuthorityService {
+    // get authority by id
+    Authority getAuthorityById(Long id);
 }
