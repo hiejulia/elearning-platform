@@ -42,12 +42,12 @@ public class Course implements Serializable {
     @Column(nullable = false)
     private String content;
 
-//    @Lob // 大对象，映射 MySQL 的 Long Text 类型
-//    @Basic(fetch = FetchType.LAZY) // 懒加载
-//    @NotEmpty(message = "内容不能为空")
+//    @Lob
+//    @Basic(fetch = FetchType.LAZY)
+
 //    @Size(min = 2)
-//    @Column(nullable = false) // 映射为字段，值不能为空
-//    private String htmlContent;                             // 将 md 转为 html
+//    @Column(nullable = false)
+//    private String htmlContent;                             // md and html
 
     @OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
@@ -213,33 +213,33 @@ public class Course implements Serializable {
         this.voteSize = this.votes.size();
     }
 
-
-    public boolean addVote(Vote vote) {
-        boolean isExist = false;
-        //判断重复
-        for (int index = 0; index < this.votes.size(); index++) {
-            if (vote.getUser().getId().equals(this.votes.get(index).getUser().getId())) {
-                isExist = true;
-                break;
-            }
-        }
-        if (!isExist) {
-            this.votes.add(vote);
-            this.voteSize = this.votes.size();
-        }
-        return isExist;
-    }
-
-
-    public void removeVote(Long voteId) {
-        for (int index = 0; index < this.votes.size(); index++) {
-            if (voteId.equals(this.votes.get(index).getId())) {
-                this.votes.remove(index);
-                break;
-            }
-        }
-        this.voteSize = this.votes.size();
-    }
+//
+//    public boolean addVote(Vote vote) {
+//        boolean isExist = false;
+//
+//        for (int index = 0; index < this.votes.size(); index++) {
+//            if (vote.getUser().getId().equals(this.votes.get(index).getUser().getId())) {
+//                isExist = true;
+//                break;
+//            }
+//        }
+//        if (!isExist) {
+//            this.votes.add(vote);
+//            this.voteSize = this.votes.size();
+//        }
+//        return isExist;
+//    }
+//
+//
+//    public void removeVote(Long voteId) {
+//        for (int index = 0; index < this.votes.size(); index++) {
+//            if (voteId.equals(this.votes.get(index).getId())) {
+//                this.votes.remove(index);
+//                break;
+//            }
+//        }
+//        this.voteSize = this.votes.size();
+//    }
 
     public Catalog getCatalog() {
         return catalog;
